@@ -51,28 +51,28 @@ export const slidesData = [
 
 export const teamMembers = [
   {
-    name: "Coriss Ambady",
-    role: "Financial Analyst",
-    imageSrc: "/assets/img/avatars/t1.jpg",
-    imageSrcSet: "/assets/img/avatars/t1@2x.jpg 2x",
+    name: "Josh Yauri",
+    role: "Presidente",
+    imageSrc: "/assets/img/josh_yauri.png",
+    imageSrcSet: "/assets/img/josh_yauri.png 2x",
   },
   {
-    name: "Cory Zamora",
-    role: "Marketing Specialist",
-    imageSrc: "/assets/img/avatars/t2.jpg",
-    imageSrcSet: "/assets/img/avatars/t2@2x.jpg 2x",
+    name: "Nilo Cori",
+    role: "Vicepresidente",
+    imageSrc: "/assets/img/nilo_cori.png",
+    imageSrcSet: "/assets/img/nilo_cori.png 2x",
   },
   {
-    name: "Nikolas Brooten",
-    role: "Sales Manager",
-    imageSrc: "/assets/img/avatars/t3.jpg",
-    imageSrcSet: "/assets/img/avatars/t3@2x.jpg 2x",
+    name: "Rodrigo Ramos",
+    role: "Tesorero",
+    imageSrc: "/assets/img/rodrigo_ramos.png",
+    imageSrcSet: "/assets/img/rodrigo_ramos.png 2x",
   },
   {
-    name: "Jackie Sanders",
-    role: "Investment Planner",
-    imageSrc: "/assets/img/avatars/t4.jpg",
-    imageSrcSet: "/assets/img/avatars/t4@2x.jpg 2x",
+    name: "Christian Miraya",
+    role: "Secretario",
+    imageSrc: "/assets/img/christian_miraya.png",
+    imageSrcSet: "/assets/img/christian_miraya.png 2x",
   },
 ];
 
@@ -80,24 +80,24 @@ export const teamMembersRRHH = [
     {
         name: "Alejandro Gutarra",
         role: "Coordinador de RRHH",
-        imageSrc: "/assets/img/avatars/t1.jpg",
-        imageSrcSet: "/assets/img/avatars/t1@2x.jpg 2x",
+        imageSrc: "/assets/img/alejandro_gutarra.png",
+        imageSrcSet: "/assets/img/alejandro_gutarra.png 2x",
     }
 ];
 
 export const teamMembersG = [
     {
-        name: "Alejandro Gutarra",
-        role: "Coordinador de RRHH",
-        imageSrc: "/assets/img/avatars/t1.jpg",
-        imageSrcSet: "/assets/img/avatars/t1@2x.jpg 2x",
+        name: "Gerald Quispe",
+        role: "Coordinador de Gestión",
+        imageSrc: "/assets/img/gerald_quispe.png",
+        imageSrcSet: "/assets/img/gerald_quispe.png 2x",
     }
 ];
 
 export const teamMembersM = [
     {
-        name: "Alejandro Gutarra",
-        role: "Coordinador de RRHH",
+        name: "Brizbana Palomino",
+        role: "Coordinadora de Marketing",
         imageSrc: "/assets/img/avatars/t1.jpg",
         imageSrcSet: "/assets/img/avatars/t1@2x.jpg 2x",
     }
@@ -105,10 +105,10 @@ export const teamMembersM = [
 
 export const teamMembersI = [
     {
-        name: "Alejandro Gutarra",
-        role: "Coordinador de RRHH",
-        imageSrc: "/assets/img/avatars/t1.jpg",
-        imageSrcSet: "/assets/img/avatars/t1@2x.jpg 2x",
+        name: "Jean Piere Ipurre",
+        role: "Coordinador de Investigación",
+        imageSrc: "/assets/img/jeanpiere_ipurre.png",
+        imageSrcSet: "/assets/img/jeanpiere_ipurre.png 2x",
     }
 ];
 

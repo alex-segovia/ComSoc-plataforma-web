@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Members from "@/components/homes/home-26/Members";
-import { teamMembersRRHH } from "@/data/team";
+import { teamMembersG } from "@/data/team";
 
 export default function About() {
   return (
@@ -15,7 +15,7 @@ export default function About() {
               className="!w-[800px] !h-[615px] object-cover"
               srcSet="/assets/img/illustrations/3d5@2x.png 2x"
               alt="image"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuuF_FXlwSEj016MYOs_fcaBE98MabbL4s_Q&s"
+              src="/assets/img/area_gestion.jpg"
               width={800}
               height={615}
             />
@@ -24,19 +24,15 @@ export default function About() {
         {/*/column */}
         <div className="xl:w-5/12 lg:w-5/12 w-full flex-[0_0_auto] max-w-full !mr-auto px-[7.5px] !mt-[50px] xl:!mt-0 lg:!mt-0">
           <h2 className="!text-[0.8rem] uppercase !text-[#605dba] !mb-3 !leading-[1.35 !tracking-[0.02rem] !mb-3">
-            Our Solutions
+            Hacemos que las cosas sucedan: de la idea a la realidad.
           </h2>
           <h3 className="xl:!text-[1.9rem] !text-[calc(1.315rem_+_0.78vw)] !leading-[1.25] font-semibold !mb-5 xxl:!pr-5">
-            Just sit &amp; relax while we take care of your business needs.
+            Área de Gestión
           </h3>
           <p className="!mb-6">
-            Cum sociis natoque penatibus et magnis dis parturient montes,
-            nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in,
-            egestas eget quam. Praesent commodo cursus. Maecenas sed diam eget
-            risus varius blandit sit amet non magna. Praesent commodo cursus
-            magna.
+            Planificamos, organizamos y ejecutamos los eventos académicos y talleres. Coordinamos la logística, presupuestos y alianzas necesarias para asegurar que cada actividad cumpla con los estándares de calidad de la IEEE.
           </p>
-            <Members members={teamMembersRRHH} />
+            <Members members={teamMembersG} />
           {/*/.row */}
         </div>
         {/*/column */}

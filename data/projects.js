@@ -146,8 +146,8 @@ export const projects2 = [
 ];
 
 export const projects3 = [
-  { src: "/assets/img/photos/pp17.jpg", width: 1100, height: 770, eventId: 1 },
-  { src: "/assets/img/photos/pp18.jpg", width: 1100, height: 770, eventId: 2 },
+  { src: "/assets/img/cyberspace_portada.png", width: 1100, height: 770, eventId: 1 },
+  { src: "/assets/img/telecomunicaciones_videojuegos_portada.png", width: 1100, height: 770, eventId: 2 },
 ];
 
 export const projects4 = [

@@ -1,24 +1,24 @@
 export const blogPostsuwu1 = [
   {
       id: 2,
-    title: "Ligula tristique quis risus",
+    title: "Telecomunicaciones Aplicadas a los Videojuegos",
     content:
       "Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras imperdiet nun eu dolor.",
-    imageUrl: "/assets/img/photos/b4.jpg",
-    date: "14 Apr 2022",
-    category: "Coding",
+    imageUrl: "/assets/img/telecomunicaciones_videojuegos_portada.png",
+    date: "11/09/2025",
+    category: "Evento técnico",
   }
 ];
 
 export const blogPostsuwu2 = [
     {
         id: 1,
-        title: "Ligula tristique quis risus",
+        title: "CyberSpace",
         content:
             "Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras imperdiet nun eu dolor.",
-        imageUrl: "/assets/img/photos/b4.jpg",
-        date: "14 Apr 2022",
-        category: "Coding",
+        imageUrl: "/assets/img/cyberspace_portada.png",
+        date: "18/10/2025",
+        category: "Evento técnico",
     }
 ];
 
@@ -216,25 +216,25 @@ export const blogPosts4 = [
 export const posts = [
   {
     id: 1,
-    image: "/assets/img/photos/b1.jpg",
-    category: "Teamwork",
-    title: "Amet Dolor Bibendum Parturient Cursus",
+    image: "/assets/img/cyberspace_portada.png",
+    category: "Evento técnico",
+    title: "CyberSpace",
     content:
-      "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur.",
-    date: "5 Jul 2022",
-    author: "By Sandbox",
+      "CyberSpace 2025 es un ciclo de tres webinars dedicados a introducir a estudiantes y entusiastas al mundo de la ciberseguridad. Cada sesión contará con un ponente internacional que abordará temas actuales y accesibles, desde hábitos de protección digital hasta los riesgos y oportunidades que trae la Inteligencia Artificial. El evento incluirá actividades interactivas, como dinámicas y trivias en vivo, para mantener una experiencia participativa y entretenida. CyberSpace 2025 buscará acercar la ciberseguridad de una manera clara, práctica y motivadora, creando un espacio ideal para quienes deseen iniciarse en este campo.",
+    date: "18/10/2025",
+    author: "Nilo Cori",
     comments: 3,
     likes: 3,
   },
   {
     id: 2,
-    image: "/assets/img/photos/b2.jpg",
-    category: "Ideas",
-    title: "Fringilla Ligula Pharetra Amet",
-    content:
-      "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur.",
-    date: "25 Jun 2022",
-    author: "By Sandbox",
+    image: "/assets/img/telecomunicaciones_videojuegos_portada.png",
+    category: "Evento técnico",
+    title: "Telecomunicaciones Aplicadas a los Videojuegos",
+    content: 
+      "Este evento llevará a los asistentes a descubrir cómo funciona realmente una partida online, explicando de forma sencilla y didáctica qué elementos permiten que un videojuego se conecte, responda y funcione sin interrupciones. Se desarrollarán dos turnos con actividades, trivias y un minitorneo para que los participantes aprendan mientras se divierten. Además, se entregarán premios y merchandising para motivar la participación. “Telecomunicaciones Aplicadas a los Videojuegos” buscará conectar el mundo gamer con el de la ingeniería, brindando una experiencia amena y accesible para todos los interesados en entender qué hay detrás del gaming moderno.",
+    date: "11/09/2025",
+    author: "Nilo Cori",
     comments: 5,
     likes: 4,
   }
@@ -288,19 +288,29 @@ export const posts2 = [
 ];
 
 export const posts3 = [
-  {
+    {
     id: 1,
-    image: "/assets/img/photos/a1.jpg",
-    title: "Magna Mollis Ultricies",
-    date: "26 Mar 2022",
+    image: "/assets/img/cyberspace_portada.png",
+    category: "Evento técnico",
+    title: "CyberSpace",
+    content:
+      "CyberSpace 2025 es un ciclo de tres webinars dedicados a introducir a estudiantes y entusiastas al mundo de la ciberseguridad. Cada sesión contará con un ponente internacional que abordará temas actuales y accesibles, desde hábitos de protección digital hasta los riesgos y oportunidades que trae la Inteligencia Artificial. El evento incluirá actividades interactivas, como dinámicas y trivias en vivo, para mantener una experiencia participativa y entretenida. CyberSpace 2025 buscará acercar la ciberseguridad de una manera clara, práctica y motivadora, creando un espacio ideal para quienes deseen iniciarse en este campo.",
+    date: "18/10/2025",
+    author: "Nilo Cori",
     comments: 3,
+    likes: 3,
   },
   {
     id: 2,
-    image: "/assets/img/photos/a2.jpg",
-    title: "Ornare Nullam Risus",
-    date: "16 Feb 2022",
-    comments: 6,
+    image: "/assets/img/telecomunicaciones_videojuegos_portada.png",
+    category: "Evento técnico",
+    title: "Telecomunicaciones Aplicadas a los Videojuegos",
+    content: 
+      "Este evento llevará a los asistentes a descubrir cómo funciona realmente una partida online, explicando de forma sencilla y didáctica qué elementos permiten que un videojuego se conecte, responda y funcione sin interrupciones. Se desarrollarán dos turnos con actividades, trivias y un minitorneo para que los participantes aprendan mientras se divierten. Además, se entregarán premios y merchandising para motivar la participación. “Telecomunicaciones Aplicadas a los Videojuegos” buscará conectar el mundo gamer con el de la ingeniería, brindando una experiencia amena y accesible para todos los interesados en entender qué hay detrás del gaming moderno.",
+    date: "11/09/2025",
+    author: "Nilo Cori",
+    comments: 5,
+    likes: 4,
   }
 ];
 

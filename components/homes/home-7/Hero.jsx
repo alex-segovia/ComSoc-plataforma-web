@@ -4,20 +4,25 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="wrapper bg-gradient-purple">
-      <div className="container py-[4.5rem] xl:pt-20 lg:pt-20 md:pt-20 xl:pb-32 lg:pb-32 md:pb-32">
+      <div className="container py-[4rem] xl:pt-20 lg:pt-20 md:pt-20 xl:pb-16 lg:pb-8 md:pb-8">
         <div className="flex flex-wrap mx-[-15px] !text-center">
           <div
-            className="xl:w-9/12 lg:w-9/12 xxl:w-10/12 w-full flex-[0_0_auto] !px-[15px] max-w-full !mx-auto"
+            className="w-full flex-[0_0_auto] px-4 max-w-full mx-auto"
             data-cues="zoomIn"
             data-group="welcome"
             data-interval={-200}
           >
-            <h2 className="xl:!text-[2.5rem] !text-[calc(1.375rem_+_1.5vw)] !leading-[1.15] font-bold !mb-4">
-              Tecnología, Información y Comunicaciones
-            </h2>
-            <p className="lead !text-[1.2rem] leading-normal md:!px-5 xl:!px-20 xxl:!px-10 !mb-7">
-              Somos IEEE ComSoc PUCP, el capítulo estudiantil difusor de las tecnologías de la información y de las comunicaciones (TIC) dentro de la PUCP.
-            </p>
+            <h1 className="font-extrabold tracking-tight mb-6 leading-none">
+              <span className="text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] xl:text-[4.2rem] text-[#343f52]">
+                  Más que ingeniería,
+              </span>
+              <br />
+              <span className="text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] xl:text-[4.2rem] text-transparent bg-clip-text bg-gradient-to-r from-[#605dba] to-[#747ed1]">
+                creamos conexiones.
+              </span>
+            </h1>
+            <p className="lead !text-[1.3rem] font-medium leading-relaxed text-gray-600 md:px-10 xl:px-32 mb-10 max-w-[900px] mx-auto">
+              Somos el capítulo estudiantil IEEE ComSoc PUCP: donde la pasión por las telecomunicaciones se transforma en innovación y liderazgo.            </p>
           </div>
           {/* /column */}
         </div>
@@ -47,9 +52,9 @@ export default function Hero() {
             <figure className="m-0 p-0">
               <Image
                 className="max-w-full h-auto"
-                srcSet="/assets/img/illustrations/i12@2x.png 2x"
+                srcSet="/assets/img/integracion1.jpg 2x"
                 alt="image"
-                src="/assets/img/illustrations/i12.png"
+                src="/assets/img/integracion1.jpg"
                 width={800}
                 height={573}
               />

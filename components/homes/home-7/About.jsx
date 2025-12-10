@@ -1,254 +1,151 @@
 "use client";
-
-import { useEffect, useRef } from "react";
 import Image from "next/image";
+
 export default function About() {
-  const isotopContainer = useRef();
-  const initIsotop = async () => {
-    const Isotope = (await import("isotope-layout")).default;
-    const imagesloaded = (await import("imagesloaded")).default;
-
-    // Initialize Isotope in the mounted hook
-    const isotope = new Isotope(isotopContainer.current, {
-      itemSelector: ".item",
-      layoutMode: "masonry", // or 'fitRows', depending on your layout needs
-    });
-    imagesloaded(isotopContainer.current).on(
-      "progress",
-      function (instance, image) {
-        // Trigger Isotope layout
-        isotope.layout();
-      }
-    );
-  };
-
-  useEffect(() => {
-    /////////////////////////////////////////////////////
-    // Magnate Animation
-
-    setTimeout(() => {
-      initIsotop();
-    }, 100);
-  }, []);
   return (
-    <div className="container">
-      <div className="flex flex-wrap mx-[-15px] xl:mx-0 lg:mx-0 !mt-[-50px] !mb-[5rem] xl:!mb-[8rem] lg:!mb-[8rem] md:!mb-[8rem] items-center">
-        <div className="xl:w-6/12 lg:w-6/12 w-full flex-[0_0_auto] xl:px-0 lg:px-0 !px-[15px] max-w-full !mt-[50px]">
-          <div className="flex flex-wrap mx-[-15px] !mt-[-30px] !text-center">
-            <div className="xl:w-6/12 lg:w-6/12 md:w-6/12 w-full flex-[0_0_auto] !px-[15px] max-w-full !mt-[30px]">
-              <div className="flex flex-wrap mx-[-15px]">
-                <div className="w-full flex-[0_0_auto] !px-[15px] max-w-full">
-                  <figure className="!rounded-[.4rem] !mb-6">
-                    <Image
-                      className="!rounded-[.4rem]"
-                      srcSet="/assets/img/photos/se1@2x.jpg 2x"
-                      alt="image"
-                      src="/assets/img/photos/se1.jpg"
-                      width={340}
-                      height={325}
-                    />
-                  </figure>
-                </div>
-                {/* /column */}
-                <div className="w-full flex-[0_0_auto] !px-[15px] max-w-full">
-                  <div className="card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                    <div className="card-body flex-[1_1_auto] p-[40px]">
-                      <div className="icon btn btn-circle btn-lg btn-soft-purple pointer-events-none !mb-3 xl:!text-[1.3rem] w-12 h-12 lg:!text-[calc(1.255rem_+_0.06vw)] md:!text-[calc(1.255rem_+_0.06vw)] max-md:!text-[calc(1.255rem_+_0.06vw)] !inline-flex !items-center !justify-center !leading-none !p-0 !rounded-[100%]">
-                        <i className="uil uil-monitor before:content-['\ec19']" />
-                      </div>
-                      <h4 className="!text-[1rem] !leading-[1.45]">
-                        Visión
-                      </h4>
-                      <p className="!mb-2">
-                        Nulla vitae elit libero, a pharetra augue. Donec id elit
-                        non mi porta gravida.
-                      </p>
-                    </div>
-                    {/*/.card-body */}
-                  </div>
-                  {/*/.card */}
-                </div>
-                {/* /column */}
-              </div>
-              {/* /.row */}
+    <div className="container py-12 xl:py-16">
+      
+      {/* --- SECCIÓN 1: Misión, Visión y ¿Qué hacemos? --- */}
+      <div className="flex flex-wrap lg:flex-nowrap gap-10 xl:gap-20 mb-12 lg:mb-16">        
+        {/* COLUMNA IZQUIERDA: Misión y Visión (Checkerboard) */}
+        <div className="w-full lg:w-7/12 flex flex-col gap-6">
+          
+          {/* FILA 1: Imagen Integración + Visión */}
+          <div className="grid grid-cols-1 md:grid-cols-2 h-auto gap-6 md:gap-0">
+            {/* Imagen: Se estira para igualar al texto */}
+            <div className="relative h-64 md:h-auto min-h-[300px] rounded-t-lg md:rounded-l-lg md:rounded-tr-none overflow-hidden">
+              <Image
+                src="/assets/img/integracion2.jpeg"
+                alt="Integración"
+                fill
+                className="object-cover"
+              />
             </div>
-            {/* /column */}
-            <div className="xl:w-6/12 lg:w-6/12 md:w-6/12 w-full flex-[0_0_auto] !px-[15px] max-w-full !mt-[30px]">
-              <div className="flex flex-wrap mx-[-15px]">
-                <div className="w-full flex-[0_0_auto] !px-[15px] max-w-full xl:!order-2 lg:!order-2 md:!order-2">
-                  <figure className="!rounded-[.4rem] !mb-6 xl:!mb-0 lg:!mb-0 md:!mb-0">
-                    <Image
-                      className="!rounded-[.4rem]"
-                      srcSet="/assets/img/photos/se2@2x.jpg 2x"
-                      alt="image"
-                      src="/assets/img/photos/se2.jpg"
-                      width={340}
-                      height={325}
-                    />
-                  </figure>
+            {/* Texto */}
+            <div className="card shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)] rounded-b-lg md:rounded-r-lg md:rounded-bl-none h-full">
+              <div className="card-body p-8 flex flex-col justify-center h-full">
+                <div className="icon btn btn-circle btn-lg btn-soft-purple pointer-events-none mb-4 w-12 h-12 inline-flex items-center justify-center rounded-full">
+                  <i className="uil uil-monitor text-xl" />
                 </div>
-                {/* /column */}
-                <div className="w-full flex-[0_0_auto] !px-[15px] max-w-full">
-                  <div className="card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)] xl:!mb-6 lg:!mb-6 md:!mb-6 lg:!mt-6 xl:!mt-6">
-                    <div className="card-body flex-[1_1_auto] p-[40px]">
-                      <div className="icon btn btn-circle btn-lg btn-soft-purple pointer-events-none !mb-3 xl:!text-[1.3rem] w-12 h-12 lg:!text-[calc(1.255rem_+_0.06vw)] md:!text-[calc(1.255rem_+_0.06vw)] max-md:!text-[calc(1.255rem_+_0.06vw)] !inline-flex !items-center !justify-center !leading-none !p-0 !rounded-[100%]">
-                        <i className="uil uil-mobile-android before:content-['\ec0a']" />
-                      </div>
-                      <h4 className="!text-[1rem] !leading-[1.45]">
-                        Misión
-                      </h4>
-                      <p className="!mb-2">
-                        Nulla vitae elit libero, a pharetra augue. Donec id elit
-                        non mi porta gravida.
-                      </p>
-                    </div>
-                    {/*/.card-body */}
-                  </div>
-                  {/*/.card */}
-                </div>
-                {/* /column */}
+                <h4 className="text-lg font-bold mb-2">Misión</h4>
+                <p className="mb-0 text-sm leading-relaxed">
+                  Impulsar estudiantes y difundir las TIC con innovación, aprendizaje y conexiones globales.
+                </p>
               </div>
-              {/* /.row */}
             </div>
-            {/* /column */}
           </div>
-          {/* /.row */}
-        </div>
-        {/* /column */}
-        <div className="xl:w-5/12 lg:w-5/12 w-full flex-[0_0_auto] xl:px-0 lg:px-0 !px-[15px] max-w-full xl:!ml-[8.33333333%] lg:!ml-[8.33333333%] !mt-[50px]">
-          <h2 className="xl:!text-[1.9rem] !text-[calc(1.315rem_+_0.78vw)] !leading-[1.25] font-bold !mb-3">
-            ¿Qué hacemos?
-          </h2>
-          <p className="lead !text-[1.1rem] !leading-[1.5] font-medium">
-            The full service we are offering is specifically designed to meet
-            your business needs.
-          </p>
-          <p>
-            Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget
-            urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis
-            ornare vel eu leo. Maecenas faucibus mollis elit interdum. Duis
-            mollis, est non commodo luctus, nisi erat ligula.
-          </p>
-        </div>
-        {/* /column */}
-      </div>
-      {/* /.row */}
-      <div className="flex flex-wrap mx-[-15px] xl:mx-0 lg:mx-0 !mt-[-50px] items-center !mb-[5rem] xl:!mb-[8rem] lg:!mb-[8rem]">
-        <div className="xl:w-6/12 lg:w-6/12 flex-[0_0_auto] lg:px-0 xl:px-0 !px-[15px] max-w-full xl:!order-2 xl:!ml-[8.33333333%] lg:!order-2 lg:!ml-[8.33333333%] grid !mt-[50px]">
-          <div
-            ref={isotopContainer}
-            className="flex flex-wrap mx-[-15px] xl:mx-[-12.5px] lg:mx-[-12.5px] md:mx-[-12.5px] !mt-[-25px] items-center counter-wrapper isotope"
-          >
-            <div className="item xl:w-6/12 lg:w-6/12 md:w-6/12 w-full flex-[0_0_auto] !px-[15px] xl:!px-[12.5px] lg:!px-[12.5px] md:!px-[12.5px] !mt-[25px] max-w-full">
-              <div className="card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <div className="card-body flex-[1_1_auto] p-[1.5rem]">
-                  <div className="flex lg:block xl:!flex flex-row">
-                    <div>
-                      <div className="icon btn btn-circle btn-lg btn-soft-purple pointer-events-none !mx-auto !mr-4 lg:!mb-3 xl:!mb-0 xl:!text-[1.3rem] w-12 h-12 !text-[calc(1.255rem_+_0.06vw)] !inline-flex !items-center !justify-center !leading-none !p-0 !rounded-[100%]">
-                        <i className="uil uil-presentation-check before:content-['\ec66']" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="counter !mb-1 xl:!text-[2rem] !text-[calc(1.325rem_+_0.9vw)] !tracking-[normal] !leading-none">
-                        7518
-                      </h3>
-                      <p className="!mb-0">Projects Done</p>
-                    </div>
-                  </div>
+
+          {/* FILA 2: Misión + Imagen Copa */}
+          <div className="grid grid-cols-1 md:grid-cols-2 h-auto gap-6 md:gap-0">
+             {/* Texto (Primero en escritorio para efecto ajedrez) */}
+             <div className="card shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)] rounded-t-lg md:rounded-l-lg md:rounded-tr-none h-full order-2 md:order-1">
+              <div className="card-body p-8 flex flex-col justify-center h-full">
+                <div className="icon btn btn-circle btn-lg btn-soft-purple pointer-events-none mb-4 w-12 h-12 inline-flex items-center justify-center rounded-full">
+                  <i className="uil uil-mobile-android text-xl" />
                 </div>
-                {/*/.card-body */}
+                <h4 className="text-lg font-bold mb-2">Visión</h4>
+                <p className="mb-0 text-sm leading-relaxed">
+                  Ser capítulo líder en creatividad tecnológica, formando futuros profesionales destacados en la industria de las TIC.
+                </p>
               </div>
-              {/*/.card */}
             </div>
-            {/*/column */}
-            <div className="item xl:w-6/12 lg:w-6/12 md:w-6/12 w-full flex-[0_0_auto] !px-[15px] xl:!px-[12.5px] lg:!px-[12.5px] md:!px-[12.5px] !mt-[25px] max-w-full">
-              <div className="card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <div className="card-body flex-[1_1_auto] p-[1.5rem]">
-                  <div className="flex lg:block xl:!flex flex-row">
-                    <div>
-                      <div className="icon btn btn-circle btn-lg btn-soft-red pointer-events-none !mx-auto !mr-4 lg:!mb-3 xl:!mb-0 xl:!text-[1.3rem] w-12 h-12 !text-[calc(1.255rem_+_0.06vw)] !inline-flex !items-center !justify-center !leading-none !p-0 !rounded-[100%]">
-                        <i className="uil uil-users-alt before:content-['\ed70']" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="counter !mb-1 xl:!text-[2rem] !text-[calc(1.325rem_+_0.9vw)] !tracking-[normal] !leading-none">
-                        3472
-                      </h3>
-                      <p className="!mb-0">Happy Customers</p>
-                    </div>
-                  </div>
-                </div>
-                {/*/.card-body */}
-              </div>
-              {/*/.card */}
+            {/* Imagen */}
+            <div className="relative h-64 md:h-auto min-h-[300px] rounded-b-lg md:rounded-r-lg md:rounded-bl-none overflow-hidden order-1 md:order-2">
+              <Image
+                src="/assets/img/copa.png"
+                alt="Copa"
+                fill
+                className="object-cover object-top"
+              />
             </div>
-            {/*/column */}
-            <div className="item xl:w-6/12 lg:w-6/12 md:w-6/12 w-full flex-[0_0_auto] !px-[15px] xl:!px-[12.5px] lg:!px-[12.5px] md:!px-[12.5px] !mt-[25px] max-w-full">
-              <div className="card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <div className="card-body flex-[1_1_auto] p-[1.5rem]">
-                  <div className="flex lg:block xl:!flex flex-row">
-                    <div>
-                      <div className="icon btn btn-circle btn-lg btn-soft-yellow pointer-events-none !mx-auto !mr-4 lg:!mb-3 xl:!mb-0 xl:!text-[1.3rem] w-12 h-12 !text-[calc(1.255rem_+_0.06vw)] !inline-flex !items-center !justify-center !leading-none !p-0 !rounded-[100%]">
-                        <i className="uil uil-user-check before:content-['\ed65']" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="counter !mb-1 xl:!text-[2rem] !text-[calc(1.325rem_+_0.9vw)] !tracking-[normal] !leading-none">
-                        4537
-                      </h3>
-                      <p className="!mb-0">Expert Employees</p>
-                    </div>
-                  </div>
-                </div>
-                {/*/.card-body */}
-              </div>
-              {/*/.card */}
-            </div>
-            {/*/column */}
-            <div className="item xl:w-6/12 lg:w-6/12 md:w-6/12 w-full flex-[0_0_auto] !px-[15px] xl:!px-[12.5px] lg:!px-[12.5px] md:!px-[12.5px] !mt-[25px] max-w-full">
-              <div className="card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <div className="card-body flex-[1_1_auto] p-[1.5rem]">
-                  <div className="flex lg:block xl:!flex flex-row">
-                    <div>
-                      <div className="icon btn btn-circle btn-lg btn-soft-aqua pointer-events-none !mx-auto !mr-4 lg:!mb-3 xl:!mb-0 xl:!text-[1.3rem] w-12 h-12 !text-[calc(1.255rem_+_0.06vw)] !inline-flex !items-center !justify-center !leading-none !p-0 !rounded-[100%]">
-                        <i className="uil uil-trophy before:content-['\ed4f']" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="counter !mb-1 xl:!text-[2rem] !text-[calc(1.325rem_+_0.9vw)] !tracking-[normal] !leading-none">
-                        2184
-                      </h3>
-                      <p className="!mb-0">Awards Won</p>
-                    </div>
-                  </div>
-                </div>
-                {/*/.card-body */}
-              </div>
-              {/*/.card */}
-            </div>
-            {/*/column */}
           </div>
-          {/*/.row */}
+
         </div>
-        {/*/column */}
-        <div className="xl:w-5/12 lg:w-5/12 w-full flex-[0_0_auto] lg:px-0 xl:px-0 !px-[15px] max-w-full !mt-[50px]">
-          <h2 className="xl:!text-[1.9rem] !text-[calc(1.315rem_+_0.78vw)] !leading-[1.25] font-bold !mb-3">
-            Únete a nuestra comunidad
-          </h2>
-          <p className="lead !text-[1.1rem] !leading-[1.5] font-medium">
-            We have considered our business solutions to support you on every
-            stage of your growth.
+
+        {/* COLUMNA DERECHA: ¿Qué hacemos? */}
+        <div className="w-full lg:w-5/12 flex flex-col justify-center">
+          <h2 className="text-3xl xl:text-4xl font-bold mb-6">¿Qué hacemos?</h2>
+          <p className="lead text-lg text-gray-600 font-medium mb-6">
+            IEEE ComSoc PUCP es una comunidad que impulsa el aprendizaje y la innovación en tecnologías de comunicaciones.
           </p>
-          <p className="!mb-0">
-            Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-            Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          <p className="text-gray-500 mb-6">
+            Mediante proyectos, talleres y alianzas, fomentamos el crecimiento profesional y la colaboración. Más que un capítulo técnico, es un espacio donde la curiosidad se convierte en experiencia.
           </p>
         </div>
-        {/*/column */}
       </div>
-      {/*/.row */}
+
+      {/* --- SECCIÓN 2: Únete + Stats (Lado a Lado) --- */}
+      <div className="flex flex-wrap lg:flex-nowrap items-center gap-10 xl:gap-20">
+        
+        {/* Texto Únete (Izquierda) */}
+        <div className="w-full lg:w-5/12">
+            <h2 className="text-3xl font-bold mb-4">Únete a nuestra comunidad</h2>
+            <p className="lead text-lg font-medium mb-4 text-gray-600">
+                Forma parte de un capítulo donde la curiosidad, la tecnología y las ganas de aprender se encuentran.
+            </p>
+            <p className="text-gray-500 mb-6">
+                En IEEE ComSoc PUCP te integrarás a una comunidad que impulsa tu crecimiento a través de proyectos, talleres y experiencias que conectan la teoría con la práctica.
+            </p>
+            {/* Opcional: Botón aquí si quisieras */}
+        </div>
+
+        {/* Grid de Stats (Derecha - Cuadrada 2x2) */}
+        <div className="w-full lg:w-7/12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Stat 1 */}
+                <div className="card border border-gray-100 shadow-[0_2px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1">
+                  <div className="card-body p-6 flex items-center">
+                        <div className="icon btn btn-circle btn-lg btn-soft-purple mr-4 w-12 h-12 flex items-center justify-center rounded-full flex-shrink-0">
+                            <i className="uil uil-presentation-check text-xl" />
+                        </div>
+                        <div>
+                            <h3 className="text-2xl font-bold mb-0 text-[#343f52]">+10</h3>
+                            <p className="mb-0 text-sm text-gray-500">Proyectos</p>
+                        </div>
+                    </div>
+                </div>
+                {/* Stat 2 */}
+                <div className="card border border-gray-100 shadow-[0_2px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1">
+                  <div className="card-body p-6 flex items-center">
+                        <div className="icon btn btn-circle btn-lg btn-soft-red mr-4 w-12 h-12 flex items-center justify-center rounded-full flex-shrink-0">
+                            <i className="uil uil-users-alt text-xl" />
+                        </div>
+                        <div>
+                            <h3 className="text-2xl font-bold mb-0 text-[#343f52]">+50</h3>
+                            <p className="mb-0 text-sm text-gray-500">Miembros</p>
+                        </div>
+                    </div>
+                </div>
+                {/* Stat 3 */}
+                <div className="card border border-gray-100 shadow-[0_2px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1">
+                  <div className="card-body p-6 flex items-center">
+                        <div className="icon btn btn-circle btn-lg btn-soft-yellow mr-4 w-12 h-12 flex items-center justify-center rounded-full flex-shrink-0">
+                            <i className="uil uil-user-check text-xl" />
+                        </div>
+                        <div>
+                            <h3 className="text-3xl font-extrabold mb-0 bg-clip-text text-transparent bg-gradient-to-r from-[#605dba] to-[#FF6B6B]">
+                              +1000
+                            </h3>
+                            <p className="mb-0 text-sm text-gray-500">Seguidores</p>
+                        </div>
+                    </div>
+                </div>
+                {/* Stat 4 */}
+                <div className="card border border-gray-100 shadow-[0_2px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1">
+                  <div className="card-body p-6 flex items-center">
+                        <div className="icon btn btn-circle btn-lg btn-soft-aqua mr-4 w-12 h-12 flex items-center justify-center rounded-full flex-shrink-0">
+                            <i className="uil uil-trophy text-xl" />
+                        </div>
+                        <div>
+                            <h3 className="text-2xl font-bold mb-0 text-[#343f52]">2</h3>
+                            <p className="mb-0 text-sm text-gray-500">Premios</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
     </div>
   );
 }

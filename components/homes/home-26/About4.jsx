@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Members from "@/components/homes/home-26/Members";
-import { teamMembersRRHH } from "@/data/team";
+import { teamMembersI } from "@/data/team";
 
 export default function About2() {
     return (
@@ -20,7 +20,7 @@ export default function About2() {
                             className="!w-[800px] !h-[615px] object-cover"
                             srcSet="/assets/img/illustrations/3d5@2x.png 2x"
                             alt="image"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuuF_FXlwSEj016MYOs_fcaBE98MabbL4s_Q&s"
+                            src="/assets/img/area_investigacion.jpg"
                             width={800}
                             height={615}
                         />
@@ -32,23 +32,19 @@ export default function About2() {
               2. 'xl:text-right lg:text-right': Alinea los textos a la derecha. */}
                 <div className="xl:w-5/12 lg:w-5/12 w-full flex-[0_0_auto] max-w-full !mx-auto !ml-auto px-[7.5px] !mt-[50px] xl:!mt-0 lg:!mt-0 xl:text-right lg:text-right">
                     <h2 className="!text-[0.8rem] uppercase !text-[#605dba] !mb-3 !leading-[1.35] !tracking-[0.02rem]">
-                        Our Solutions
+                        Innovación técnica en la vanguardia de la tecnología.
                     </h2>
                     <h3 className="xl:!text-[1.9rem] !text-[calc(1.315rem_+_0.78vw)] !leading-[1.25] font-semibold !mb-5">
-                        Just sit &amp; relax while we take care of your business needs.
+                        Área de Investigación
                     </h3>
                     {/* ml-auto en el párrafo asegura que si el texto es corto, se pegue a la derecha */}
                     <p className="!mb-6 ml-auto">
-                        Cum sociis natoque penatibus et magnis dis parturient montes,
-                        nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in,
-                        egestas eget quam. Praesent commodo cursus. Maecenas sed diam eget
-                        risus varius blandit sit amet non magna. Praesent commodo cursus
-                        magna.
+                        Fomentamos la producción académica y el aprendizaje técnico. Organizamos papers, grupos de estudio y talleres especializados para profundizar en las últimas tendencias tecnológicas y científicas.
                     </p>
 
                     {/* IMPORTANTE: Flex justify-end para mover los avatares a la derecha */}
                     <div className="flex justify-start xl:justify-end lg:justify-end">
-                        <Members members={teamMembersRRHH} />
+                        <Members members={teamMembersI} />
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { blogPostsuwu2 } from "@/data/blogs";
+import { blogPostsuwu1 } from "@/data/blogs";
 import Image from "next/image";
 import Link from "next/link";
 import { Pagination } from "swiper/modules";
@@ -27,7 +27,7 @@ export default function RelatedBlogs() {
           },
         }}
       >
-        {blogPostsuwu2.map((post, i) => (
+        {blogPostsuwu1.map((post, i) => (
           <SwiperSlide key={i} className="swiper-slide">
             <article>
               <figure className="overlay overlay-1 hover-scale group rounded !mb-5">

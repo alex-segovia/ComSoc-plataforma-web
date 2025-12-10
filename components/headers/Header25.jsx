@@ -12,18 +12,18 @@ export default function Header25() {
           <div className="navbar-brand w-full">
             <Link href={`/`}>
               <Image
-                srcSet="/assets/img/logo-dark@2x.png 2x"
+                srcSet="/assets/img/ieee_pucp_comsoc_rgb_horizontal_c.png 2x"
                 alt="image"
-                src="/assets/img/logo-dark.png"
-                width={134}
-                height={26}
+                src="/assets/img/ieee_pucp_comsoc_rgb_horizontal_c.png"
+                width={400}
+                height={200}
               />
             </Link>
           </div>
           <div className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
             <div className="offcanvas-header xl:!hidden lg:!hidden flex items-center justify-between flex-row p-6">
               <h3 className="!text-white xl:!text-[1.5rem] !text-[calc(1.275rem_+_0.3vw)] !mb-0">
-                Sandbox
+                IEEE ComSoc PUCP
               </h3>
               <button
                 type="button"

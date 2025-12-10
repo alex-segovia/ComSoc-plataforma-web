@@ -10,9 +10,9 @@ import React from "react";
 
 export const metadata = {
   title:
-    "Demo 7 || Sandbox - Modern & Multipurpose React Next.js Template with Tailwind CSS",
+    "IEEE ComSoc PUCP - Plataforma Web",
   description:
-    "Sandbox - Modern & Multipurpose React Next.js Template with Tailwind CSS",
+    "Descubre los eventos y actividades que está realizando IEEE ComSoc PUCP",
 };
 export default function DemoPage7() {
   return (

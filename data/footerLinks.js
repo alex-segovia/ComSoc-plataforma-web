@@ -1,9 +1,6 @@
 export const footerLinks = [
-  { text: "About Us", href: "/about" },
-  { text: "Our Story", href: "/blog" },
-  { text: "Projects", href: "/projects" },
-  { text: "Terms of Use", href: "/terms" },
-  { text: "Privacy Policy", href: "/terms" },
+  { text: "Historia", href: "/historia" },
+  { text: "Eventos", href: "/eventos" },
 ];
 
 export const footerLinks2 = [

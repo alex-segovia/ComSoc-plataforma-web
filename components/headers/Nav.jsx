@@ -92,7 +92,7 @@ export default function Nav({ color = "#fab758" }) {
           className={`nav-link !text-[.85rem] !tracking-[normal] hover:!text-[var(--current-color)] after:!text-[var(--current-color)]`}
           href="/eventos"
         >
-          Actividades
+          Eventos
         </a>
       </li>
     </ul>

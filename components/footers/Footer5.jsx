@@ -17,16 +17,16 @@ export default function Footer5({ hasMarginTop = true }) {
             <div className="widget !text-[#cacaca]">
               <Image
                 className="!mb-4"
-                srcSet="/assets/img/logo-light@2x.png 2x"
+                srcSet="/assets/img/ieee_pucp_comsoc_rgb_pp_w.png 2x"
                 alt="image"
-                src="/assets/img/logo-light.png"
+                src="/assets/img/ieee_pucp_comsoc_rgb_pp_w.png"
                 width={134}
-                height={26}
+                height={100}
               />
               <p className="!mb-4">
-                © {new Date().getFullYear()} Sandbox.
+                © {new Date().getFullYear()} IEEE ComSoc PUCP.
                 <br className="hidden xl:block lg:block !text-[#cacaca]" />
-                All rights reserved.
+                Todos los derechos reservados.
               </p>
               <nav className="nav social social-white">
                 {socialLinks.map((elm, i) => (
@@ -48,25 +48,25 @@ export default function Footer5({ hasMarginTop = true }) {
           {/* /column */}
           <div className="md:w-4/12 xl:w-4/12 lg:w-4/12 w-full flex-[0_0_auto] !px-[15px] max-w-full xl:!mt-0 lg:!mt-0 !mt-[30px]">
             <div className="widget !text-[#cacaca]">
-              <h4 className="widget-title !text-white !mb-3">Get in Touch</h4>
+              <h4 className="widget-title !text-white !mb-3">Mantente en contacto</h4>
               <address className="xl:!pr-20 xxl:!pr-28 not-italic !leading-[inherit] block !mb-4">
-                Moonshine St. 14/05 Light City, London, United Kingdom
+                Av. Universitaria 1801, San Miguel, Lima, Perú
               </address>
               <a
                 className="!text-[#cacaca] hover:!text-[#3f78e0]"
-                href="mailto:first.last@email.com"
+                href="mailto:comsoc.pucp@ieee.org"
               >
-                info@email.com
+                comsoc.pucp@ieee.org
               </a>
               <br />
-              00 (123) 456 78 90
+              +51 955260700
             </div>
             {/* /.widget */}
           </div>
           {/* /column */}
           <div className="md:w-4/12 xl:w-4/12 lg:w-4/12 w-full flex-[0_0_auto] !px-[15px] max-w-full xl:!mt-0 lg:!mt-0 !mt-[30px]">
             <div className="widget !text-[#cacaca]">
-              <h4 className="widget-title !text-white !mb-3">Learn More</h4>
+              <h4 className="widget-title !text-white !mb-3">Descubre más</h4>
               <ul className="pl-0 list-none !mb-0">
                 {footerLinks.map((elm, i) => (
                   <li className={i != 0 ? "!mt-[0.35rem]" : ""} key={i}>

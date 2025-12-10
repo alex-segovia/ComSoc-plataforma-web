@@ -11,11 +11,9 @@ export default function Sidebar() {
 
       {/* /.widget */}
       <div className="widget ">
-        <h4 className="widget-title !mb-3">About Us</h4>
+        <h4 className="widget-title !mb-3">Sobre nosotros</h4>
         <p>
-          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
-          nibh, ut fermentum. Nulla vitae elit libero, a pharetra augue. Donec
-          id elit non mi porta gravida at eget metus.
+          Somos el capítulo estudiantil IEEE ComSoc PUCP. Conectamos a estudiantes con el futuro de las telecomunicaciones a través de la innovación, proyectos y eventos de impacto.
         </p>
 
         {/* /.social */}
@@ -31,22 +29,22 @@ export default function Sidebar() {
                 i !== 0 ? "!mt-4" : ""
               }`}
             >
-              <figure className="!rounded-[.4rem] float-left w-14 !h-[4.5rem]">
-                <Link href={`/blog-post`}>
-                  <Image
-                    className="!rounded-[.4rem]"
-                    alt="image"
-                    src={post.image}
-                    width={100}
-                    height={100}
-                  />
-                </Link>
-              </figure>
-              <div className="!relative !ml-[4.25rem] !mb-0">
-                <h6 className="!mb-2">
+                <figure className="!rounded-[.4rem] float-left w-20 h-20 relative mr-4 overflow-hidden">
+                  <Link href={`/eventos/`+post.id}>
+                    <Image
+                      className="!rounded-[.4rem] !h-full object-cover transition-transform duration-300 hover:scale-105"
+                      alt="imagen evento"
+                      src={post.image}
+                      fill // Llena el contenedor (w-20 h-20)
+                      sizes="80px"
+                    />
+                  </Link>
+                </figure>
+                <div className="!relative !ml-[6rem] !mb-0">
+                  <h6 className="!mb-2">
                   <Link
                     className="!text-[#343f52] hover:!text-[#3f78e0]"
-                    href={`/blog-post`}
+                    href={`/eventos/`+post.id}
                   >
                     {post.title}
                   </Link>
@@ -69,12 +67,7 @@ export default function Sidebar() {
         <ul className="pl-0 list-none bullet-primary !text-inherit">
           <li className="relative !pl-[1rem] before:absolute before:top-[-0.15rem] before:text-[1rem] before:content-['\2022'] before:left-0 before:font-SansSerif">
             <a className="!text-[#60697b] hover:!text-[#3f78e0]" href="#">
-              Técnico (1)
-            </a>
-          </li>
-          <li className="relative !pl-[1rem] before:absolute before:top-[-0.15rem] before:text-[1rem] before:content-['\2022'] before:left-0 before:font-SansSerif !mt-[.35rem]">
-            <a className="!text-[#60697b] hover:!text-[#3f78e0]" href="#">
-              No técnico (1)
+              Técnico (2)
             </a>
           </li>
         </ul>

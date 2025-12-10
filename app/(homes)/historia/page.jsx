@@ -1,31 +1,31 @@
-import Footer24 from "@/components/footers/Footer24";
+import Footer5 from "@/components/footers/Footer5";
 import Header25 from "@/components/headers/Header25";
 import Hero from "@/components/homes/home-27/Hero";
 import Services from "@/components/homes/home-27/Services";
 import React from "react";
-import Footer5 from "@/components/footers/Footer5";
 
 export const metadata = {
-  title:
-    "Demo 27 || Sandbox - Modern & Multipurpose React Next.js Template with Tailwind CSS",
-  description:
-    "Sandbox - Modern & Multipurpose React Next.js Template with Tailwind CSS",
+  title: "Nuestra Historia | IEEE ComSoc PUCP",
+  description: "Un legado de resiliencia e innovación desde 2006.",
 };
-export default function DemoPage27() {
+
+export default function HistoriaPage() {
   return (
     <>
-      <div className="color-navy demo27">
+      <div className="color-navy demo27 bg-white">
         <div className="grow shrink-0">
-          <Header25 />
+          {/* TRUCO: Envolvemos el Header en un div relativo con z-index alto */}
+          <div className="relative z-50 bg-white">
+             <Header25 />
+          </div>
 
-          <>
+          <main className="bg-white">
             <Hero />
-            {/* /section */}
-              <Services />
-            {/* /section */}
-
-          </>
+            <Services />
+          </main>
         </div>
+        
+        {/* Footer compacto como decidiste */}
         <Footer5 hasMarginTop={false} />
       </div>
     </>

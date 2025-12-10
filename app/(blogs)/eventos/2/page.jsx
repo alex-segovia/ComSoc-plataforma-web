@@ -1,4 +1,4 @@
-import BlogSingle from "@/components/blogs/BlogSingle";
+import BlogSingle from "@/components/blogs/BlogSingle2";
 import Footer5 from "@/components/footers/Footer5";
 import Header25 from "@/components/headers/Header25";
 import React from "react";
@@ -22,17 +22,17 @@ export default function BlogPostPage() {
                 <div className="post-header !mb-[.9rem]">
                   <div className="inline-flex uppercase !tracking-[0.02rem] text-[0.7rem] font-bold !text-[#aab0bc] !mb-[0.4rem] text-line relative align-top !pl-[1.4rem] before:content-[''] before:absolute before:inline-block before:translate-y-[-60%] before:w-3 before:h-[0.05rem] before:left-0 before:top-2/4 before:bg-[#3f78e0]">
                     <a href="#" className="hover" rel="category">
-                      Teamwork
+                      Evento técnico
                     </a>
                   </div>
                   {/* /.post-category */}
                   <h1 className="!text-[calc(1.365rem_+_1.38vw)] font-bold !leading-[1.2] xl:!text-[2.4rem] !mb-4">
-                    Commodo Dolor Bibendum Parturient Cursus Mollis
+                    Telecomunicaciones Aplicadas a los Videojuegos
                   </h1>
                   <ul className="!text-[0.8rem] !text-[#aab0bc] m-0 p-0 list-none !mb-5">
                     <li className="post-date inline-block">
                       <i className="uil uil-calendar-alt pr-[0.2rem] align-[-.05rem] before:content-['\e9ba']" />
-                      <span>5 Jul 2022</span>
+                      <span>11/09/2025</span>
                     </li>
                     <li className="post-author inline-block before:content-[''] before:inline-block before:w-[0.2rem] before:h-[0.2rem] before:opacity-50 before:m-[0_.6rem_0_.4rem] before:rounded-[100%] before:align-[.15rem] before:bg-[#aab0bc]">
                       <a
@@ -40,7 +40,7 @@ export default function BlogPostPage() {
                         href="#"
                       >
                         <i className="uil uil-user pr-[0.2rem] align-[-.05rem] before:content-['\ed6f']" />
-                        <span>By Sandbox</span>
+                        <span>Nilo Cori</span>
                       </a>
                     </li>
                   </ul>

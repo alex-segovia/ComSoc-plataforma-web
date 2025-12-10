@@ -13,12 +13,10 @@ export const brands = [
 ];
 
 export const brandImages = [
-  "/assets/img/brands/z1.png",
-  "/assets/img/brands/z2.png",
-  "/assets/img/brands/z3.png",
-  "/assets/img/brands/z4.png",
-  "/assets/img/brands/z5.png",
-  "/assets/img/brands/z6.png",
-  "/assets/img/brands/z7.png",
-  "/assets/img/brands/z8.png",
+  "/assets/img/aitel_logo.jpg",
+  "/assets/img/comred_logo.png",
+  "/assets/img/ieee_etsit_logo.png",
+  "/assets/img/ieeecspucp_logo.jpg",
+  "/assets/img/inovil_logo.jpg",
+  "/assets/img/telecompucp_logo.png",
 ];

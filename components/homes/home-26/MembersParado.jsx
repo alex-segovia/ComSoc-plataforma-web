@@ -9,10 +9,10 @@ export default function MembersParado() {
             <div className="flex flex-wrap mx-[-15px] !mb-3">
                 <div className="md:w-10/12 lg:w-full xl:w-10/12 xxl:w-9/12 w-full flex-[0_0_auto] !px-[15px] max-w-full !mx-auto !text-center">
                     <h2 className="!text-[.75rem] uppercase !text-[#747ed1] !tracking-[0.02rem] !leading-[1.35] !mb-3">
-                        Our Team
+                        Conoce acerca de nuestro equipo de trabajo
                     </h2>
-                    <h3 className="!text-[calc(1.305rem_+_0.66vw)] font-bold xl:!text-[1.8rem] !leading-[1.3] !mb-7 lg:!px-36 xl:!px-32">
-                        Think unique and be innovative. Make a difference with Sandbox.
+                    <h3 className="!text-[2rem] md:!text-[3rem] xl:!text-[3.5rem] !font-bold !leading-[1.2] !mb-7 lg:!px-10 xl:!px-0 text-[#343f52]">
+                        Mesa Directiva IEEE ComSoc PUCP
                     </h3>
                 </div>
                 {/*/column */}
@@ -37,7 +37,7 @@ export default function MembersParado() {
                                 }}
                             />
                             <div className="card">
-                                <figure className="card-img-top">
+                                <figure className="relative w-full aspect-square overflow-hidden rounded-md mb-4">                                    
                                     <Image
                                         className="max-w-full h-auto"
                                         srcSet={member.imageSrcSet}

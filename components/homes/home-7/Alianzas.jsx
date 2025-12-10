@@ -1,43 +1,81 @@
+"use client";
 import { brandImages } from "@/data/brands";
 import Image from "next/image";
 import React from "react";
+import { Autoplay, Navigation, Grid } from "swiper/modules"; // Importamos Grid
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Estilos de Swiper necesarios
+import "swiper/css";
+import "swiper/css/grid";
+import "swiper/css/navigation";
 
 export default function Alianzas() {
-    return (
-        <section id="snippet-2" className="wrapper !bg-[#ffffff] ">
-            <div className="container pt-10 xl:pt-14 lg:pt-14 md:pt-14 pb-8 xl:pb-10 lg:pb-10 md:pb-10">
-                <div className="flex flex-wrap mx-[-15px] xl:mx-[-35px] lg:mx-[-20px] !mt-[-50px] xl:!mt-0 lg:!mt-0">
-                    <div className="xl:w-4/12 lg:w-4/12 w-full flex-[0_0_auto] xl:!px-[35px] lg:!px-[20px] md:!px-[20px] !px-[15px] max-w-full xl:!mt-2 lg:!mt-2 !mt-[50px]">
-                        <h2 className="!text-[.75rem] uppercase !text-[#aab0bc] !mb-3 !tracking-[0.02rem] !leading-[1.35]">
-                            Nuestras Alianzas
-                        </h2>
-                        <h3 className="!text-[calc(1.305rem_+_0.66vw)] font-bold xl:!text-[1.8rem] !leading-[1.3] !mb-3 xxl:!pr-5">
-                            Contamos con más de ... alianzas
-                        </h3>
-                    </div>
-                    {/* /column */}
-                    <div className="xl:w-8/12 lg:w-8/12 w-full flex-[0_0_auto] xl:!px-[35px] lg:!px-[20px] !px-[15px] max-w-full !mt-[50px] xl:!mt-0 lg:!mt-0">
-                        <div className="flex flex-wrap mx-[-15px] md:mx-[-20px] xl:mx-[-35px] !mt-[-70px]">
-                            {brandImages.map((src, index) => (
-                                <div
-                                    className="xl:w-3/12 lg:w-3/12 md:w-3/12 w-6/12 flex-[0_0_auto] xl:!px-[35px] lg:!px-[20px] md:!px-[20px] !px-[15px] max-w-full !mt-[70px]"
-                                    key={index}
-                                >
-                                    <figure className="px-3 xl:!px-0 lg:!px-0 md:!px-0 xxl:!px-2">
-                                        <Image src={src} alt="image" width="450" height="301" />
-                                    </figure>
-                                </div>
-                            ))}
-                        </div>
-                        {/*/.row */}
-                    </div>
-                    {/* /column */}
-                </div>
-                {/* /.row */}
-            </div>
-            {/* /.container */}
+  return (
+    <section className="wrapper !bg-[#ffffff] py-2 xl:py-3">
+      <div className="container">
+        <div className="flex flex-wrap lg:flex-nowrap items-center gap-10">
+          
+          {/* --- COLUMNA IZQUIERDA: TEXTO --- */}
+          <div className="w-full lg:w-4/12 mb-6 lg:mb-0 flex flex-col justify-center">
+            <h2 className="text-sm uppercase text-[#aab0bc] tracking-wider mb-3">
+              Nuestras Alianzas
+            </h2>
+            <p className="mt-4 text-gray-600">
+            Contamos con más de 4 alianzas nacionales e internacionales
 
-            {/* /.container */}
-        </section>
-    );
+            </p>
+            
+            {/* Flechas de navegación (Opcional: ponerlas aquí abajo del texto) */}
+            <div className="flex gap-4 mt-6">
+               <div className="alianza-prev w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center cursor-pointer hover:bg-[#747ed1] hover:text-white hover:border-[#747ed1] transition text-[#343f52]">
+                 <i className="uil uil-angle-left-b text-xl" />
+               </div>
+               <div className="alianza-next w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center cursor-pointer hover:bg-[#747ed1] hover:text-white hover:border-[#747ed1] transition text-[#343f52]">
+                 <i className="uil uil-angle-right-b text-xl" />
+               </div>
+            </div>
+          </div>
+
+          {/* --- COLUMNA DERECHA: CARRUSEL DE LOGOS (2 FILAS) --- */}
+          <div className="w-full lg:w-8/12">
+            <Swiper
+              modules={[Grid, Autoplay, Navigation]}
+              grid={{
+                rows: 2, // Fuerza 2 filas
+                fill: "row", // Llena por filas
+              }}
+              spaceBetween={30} // Espacio entre logos
+              slidesPerView={2} // En móvil: 2 columnas (total 4 logos visibles)
+              breakpoints={{
+                500: { slidesPerView: 3 }, // Tablet chica: 3 columnas (total 6 logos visibles)
+                992: { slidesPerView: 3, spaceBetween: 40 }, // Desktop: 3 columnas grandes
+              }}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              navigation={{
+                 nextEl: ".alianza-next",
+                 prevEl: ".alianza-prev"
+              }}
+              className="h-[280px] md:h-[240px]" // Altura fija necesaria para el modo Grid
+            >
+              {brandImages.map((src, index) => (
+                <SwiperSlide key={index} className="!h-[calc((100%-30px)/2)] flex items-center justify-center">
+                   {/* Contenedor del Logo: Limpio, sin cajas */}
+                   <div className="relative w-full h-16 grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300 cursor-pointer">
+                      <Image
+                        src={src}
+                        alt="Logo alianza"
+                        fill
+                        className="object-contain"
+                      />
+                   </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
 }
